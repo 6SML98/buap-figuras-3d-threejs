@@ -1,4 +1,10 @@
-# PPf
+# Figuras 3D
+
+Proyecto final de graficación: visualización de figuras 3D en el navegador con Three.js.
+
+Proyecto académico de BUAP. Proyecto final seleccionado.
+
+## Documentación y requisitos
 
 Proyecto o conjunto de prácticas académicas de BUAP. Se publica como parte del archivo de trabajos de `6SML98`.
 
