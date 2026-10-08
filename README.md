@@ -1,25 +1,19 @@
 # Figuras 3D
 
-Proyecto final de graficación: visualización de figuras 3D en el navegador con Three.js.
+Escena con cubo, esfera, cilindro, toro y dodecaedro animados y texturas dibujadas en canvas.
 
-Proyecto académico de BUAP. Proyecto final seleccionado.
+## Requisitos
 
-## Documentación y requisitos
+Navegador con WebGL y acceso a la CDN de Three.js 0.130.0. Python 3 sirve para iniciar un servidor local.
 
+## Ejecutar
 
+```text
+python -m http.server 8000
+```
 
-## Tecnologías y archivos
+Abre http://localhost:8000/1.html.
 
-Extensiones de código: .html, .js.
+## Verificación del 8 de octubre de 2026
 
-## Ejecución
-
-Abrir el HTML de entrada o servir esta carpeta con un servidor web local. Revisar las dependencias externas indicadas en cada página.
-
-## Contenido publicado
-
-Se conserva el código y los recursos referenciados. Se excluyen dependencias instaladas, resultados de compilación, configuraciones personales, documentos ajenos al programa y datos locales.
-
-## Estado
-
-Archivo académico original. Puede contener operaciones pendientes o dependencias antiguas. No se ha verificado la ejecución de todos los programas.
+Se comprobó el renderizado en el navegador. Se corrigió el tamaño del canvas y se agregó ajuste al redimensionar la ventana. Las figuras dependen de la disponibilidad de la CDN.

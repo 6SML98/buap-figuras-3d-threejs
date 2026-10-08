@@ -4,13 +4,13 @@ const canvas = document.getElementById('myCanvas');
 
 // Crear el renderizador y establecer el canvas como el lienzo de renderizado
 const renderer = new THREE.WebGLRenderer({ canvas });
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth, Math.max(200, window.innerHeight - 100));
 
 // Crear la escena
 const scene = new THREE.Scene();
 
 // Crear la cámara
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / Math.max(200, window.innerHeight - 100), 0.1, 1000);
 camera.position.z = 5;
 
 // Crear figuras geométricas
@@ -248,3 +248,11 @@ const dodecahedronTexture = new THREE.CanvasTexture(canvasTextureDodecahedron);
 // Aplicar la textura al material del dodecaedro
 const dodecahedronMaterial = new THREE.MeshBasicMaterial({ map: dodecahedronTexture });
 dodecahedron.material = dodecahedronMaterial;
+
+window.addEventListener("resize", () => {
+    const width = window.innerWidth;
+    const height = Math.max(200, window.innerHeight - 100);
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+});
